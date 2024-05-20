@@ -1,0 +1,33 @@
+import torch
+
+ROOT_DIR = 'C:/Projects/jupyter projects/ml course/coursework'
+STYLE_DIR = 'ISPM_dataset/monet_jpg'
+CONTENT_DIR = 'ISPM_dataset/photo_jpg'
+OUTPUT_NST_DIR = 'output/NST'
+HEIGHT = 256
+WIDTH = 256
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+IMAGENET_MEAN = [0.485, 0.456, 0.406]
+IMAGENET_STD = [0.229, 0.224, 0.225]
+INVERSE_IMAGENET_MEAN = [-0.485/0.229, -0.456/0.224, -0.406/0.255]
+INVERSE_IMAGENET_STD = [1/0.229, 1/0.224, 1/0.255]
+LR = 0.001
+EPOCHS = 500
+ALPHA = 1
+BETA = 0.01
+PRINT_EVERY = 100
+FPS = 150
+NORMALIZE = True
+BATCH_SIZE = 8
+
+STYLE_IMG_EXAMPLE_1 = '0bd913dbc7.jpg'
+CONTENT_IMG_EXAMPLE_1 = '0a0c3a6d07.jpg'
+
+CONTENT_IMG_EXAMPLE_2 = '0a6e92d928.jpg'
+STYLE_IMG_EXAMPLE_2 = '0e3b3292da.jpg'
+STYLE_IMG_EXAMPLE_3 = '3d13fe022e.jpg'
+
+CONTENT_IMG_EXAMPLE_3 = '0a996d988b.jpg'
+
+MAIN_STYLE_IMG_EXAMPLE = STYLE_IMG_EXAMPLE_3
+MAIN_CONTENT_IMG_EXAMPLE = CONTENT_IMG_EXAMPLE_3
